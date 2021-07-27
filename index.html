@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+
+
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="jquery/dist/jquery.min.js"></script>
+
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+    <div class="container">
+    <div id="my-container">
+
+        <div class="card text-center">
+
+            <div class="card-header">
+
+                <h1>Jquery dynamic add remove input fields plugin demo</h1>
+
+            </div>
+
+            <div class="card-body" id="section">
+
+                <p id="pakao">Whats up duck?</p>
+                <input type="text" class="form-control"> <input type="submit" class="btn btn-danger" value="Save">
+                <a href="" class="btn btn-info" id="add">Add</a>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script>
+
+        $(document).ready(function(){
+            $('#add').on('click', function(e){
+                e.preventDefault();
+
+                dysec = '<div id="#dysec"><input type="text" class="form-control"><a href="" class="btn btn-info" id="remove">Remove</a></div>'
+
+                $('#section').append(dysec);            
+            })
+
+            $('#section').on('click','#remove',function(e){
+                e.preventDefault();
+                   //t =$(this).parent('div');
+                   //console.log(t);
+                   $(this).parent('div').remove();
+               })
+      
+        });
+    </script>
+    
+</body>
+</html>
